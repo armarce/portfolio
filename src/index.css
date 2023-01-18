@@ -1,0 +1,660 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.25%;
+  scroll-behavior: smooth;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+:root {
+  --font-size-regular: 14px;
+  --background-color: #282828;
+  --red: #FF014F;
+  --primary: #F1F1F1;
+  --white: #F1F1F1;
+  --dark-gray: #373a47;
+  --gray: #ABACB1;
+  --purple: #BBA3D5;
+}
+
+/* Themes (default dark) */
+
+/* Light */
+
+[data-theme='light'] {
+  --background-color: #fff;
+  --primary: #000;
+  --white: #F1F1F1;
+}
+
+body{
+  font-family: Poppins, Helvetica, sans-serif;
+  color: var(--primary);
+  font-size: var(--font-size-regular);
+  background-color: var(--background-color);
+}
+a{
+  text-decoration: none;
+  color: var(--primary);
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.red{
+  color: var(--red);
+}
+#root{
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+/* Burger Menu */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  display: none;
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 20px;
+  top: 20px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--primary);
+  opacity: 0.8;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  opacity: 1;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: var(--background-color);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  overflow: hidden !important;
+  height: 80vh;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Individual item */
+.bm-item {
+  
+}
+.bm-item{
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  color: inherit;
+  line-height: 24px;
+}
+.bm-item:before{
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+.bm-item:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+}
+.bm-item:hover{
+  color: var(--red);
+}
+.bm-item:hover:before{
+  transform: scaleX(1);
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Nav styles */
+
+nav{
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: 140px 1fr;
+  align-content: space-evenly;
+  padding: 0 40px 0 40px;
+}
+nav #logo{
+  font-size: 24px;
+  line-height: 24px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+}
+
+nav ul li{
+  display: block;
+  width: fit-content;
+}
+nav ul li a{
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 600;
+  position: relative;
+  color: inherit;
+  line-height: 24px;
+}
+nav ul li a:before{
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+nav ul li a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+}
+nav ul li a:hover{
+  color: var(--red);
+}
+nav ul li a:hover:before{
+  transform: scaleX(1);
+}
+/* Header styles */
+#header-container{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+header{
+  display: grid;
+  padding: 40px;
+  grid-template-areas: 'h3 person'
+                       'h1 person'
+                       'h2 person'
+                       'p person'
+                       'h4 person'
+                       'social person'
+                    ;
+  grid-template-columns: 1.4fr 1fr;
+  column-gap: 40px;
+}
+
+header h3{
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+  grid-area: h3;
+  margin: 0;
+}
+header h1{
+  grid-area: h1;
+  font-size: 60px;
+  margin: 0;
+}
+header h2{
+  grid-area: h2;
+  font-size: 36px;
+  margin: 0;
+}
+header p{
+  grid-area: p;
+  font-size: 20px;
+  line-height: 36px;
+}
+header h4{
+  grid-area: h4;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+header #social{
+  display: flex;
+  margin-top: 40px;
+  gap: 20px;
+  grid-area: social;
+}
+
+header img{
+  grid-area: person;
+  width: 100%;
+}
+
+header #social{
+  margin-top: 20px;
+}
+
+header #social a{
+  color: var(--white);
+  font-size: 24px;
+  padding: 14px 18px;
+  background-color: var(--dark-gray);
+  opacity: 0.9;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  border-radius: 4px;
+}
+header #social a:hover{
+  opacity: 1;
+  background-color: var(--red);
+}
+
+/* Main styles */
+
+main{
+  padding: 0 40px;
+}
+main h2{
+  font-size: 28px;
+  border-left: 4px solid var(--red);
+  padding-left: 10px;
+  margin-top: 0px;
+}
+
+main #about-me{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+}
+main #about-me img{
+  width: 100%;
+  filter: grayscale(100%);
+}
+main #about-me p{
+  line-height: 32px;
+  font-size: 18px;
+}
+
+/* Projects */
+
+main #projects{
+  
+}
+
+main #projects .project{
+  display: flex;
+  align-items: center;
+  row-gap: 40px;
+  color: var(--white);
+  margin-bottom: 60px;
+}
+main #projects .project:nth-child(even){
+  flex-direction: row-reverse;
+}
+main #projects .project .description{
+  position: relative;
+  height: fit-content;
+  background-color: var(--dark-gray);
+  border-radius: 8px;
+  width: 50%;
+  padding: 0px 20px;
+}
+main #projects .project .description h3{
+  font-size: 20px;
+}
+main #projects .project .description p{
+  line-height: 28px;
+  margin-bottom: 40px;
+}
+main #projects .project .description::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  border-radius: 8px;
+  transform: skew(-8deg);
+  background-color: var(--dark-gray);
+  z-index: -2;
+}
+main #projects .project:nth-child(even) .description::before{
+  top: 0;
+  right: 30px;
+  transform: skew(-8deg);
+}
+main #projects .project .description .footer{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin-bottom: 20px;
+}
+main #projects .project .description .footer .links{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+main #projects .project .description .footer .links a{
+  font-size: 24px;
+  color: var(--white);
+  opacity: 0.6;
+}
+main #projects .project .description .footer .links a:hover{
+  opacity: 1;
+}
+main #projects .project .description .footer .tags span{
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 4px;
+  text-shadow: 1px 1px 1px var(--dark-gray); 
+}
+main #projects .project a.screenshot{
+  position: relative;
+  z-index: -3;
+  margin-left: -100px;
+  width: calc(50% + 100px);
+}
+main #projects .project a.screenshot:nth-child(even){
+  position: relative;
+  z-index: -3;
+  margin-right: -100px;
+}
+main #projects .project a.screenshot img{
+  width: 100%;
+  border-radius: 12px;
+  opacity: 0.8;
+}
+main #projects .project .description .footer .tags .react{
+  border: 3px solid #61DAFB;
+}
+main #projects .project .description .footer .tags .nodejs{
+  border: 3px solid #3E863D;
+}
+main #projects .project .description .footer .tags .bulma{
+  border: 3px solid #00CAAC;
+}
+main #projects .project .description .footer .tags .php{
+  border: 3px solid #4D588E;
+}
+main #projects .project .description .footer .tags .mysql{
+  border: 3px solid #E17411;
+  border-left-color: #005D8B;
+  border-bottom-color: #005D8B;
+}
+main #projects .project .description .footer .tags .docker{
+  border: 3px solid #2496ED;
+}
+main #projects .project .description .footer .tags .jquery{
+  border: 3px solid #0868AC
+}
+main #projects .project .description .footer .tags .css{
+  border: 3px solid #1F5FAA
+}
+main #projects .project .description .footer .tags .html{
+  border: 3px solid #F75421
+}
+main #projects .project .description .footer .tags .redux{
+  border: 3px solid #7248B6
+}
+main #projects .project .description .footer .tags .netlify{
+  border: 3px solid #4B95B9
+}
+/* Skills */
+
+main #skills{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 20px;
+}
+main #skills ul#categories{
+  display: flex;
+  flex-direction: column;
+}
+main #skills ul#categories li{
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+  border-left: 2px solid var(--dark-gray);
+  height: 44px;
+  align-items: center;
+}
+main #skills ul#categories li:hover, main #skills ul#categories li.active{
+  color: var(--purple);
+  border-left: 2px solid var(--purple);
+}
+main #skills ul#categories li i{
+  width: 50px;
+  text-align: center;
+}
+main #skills ul#categories li span{
+  font-weight: 600;
+}
+main #skills ul#items{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 20px;
+}
+main #skills ul#items li{
+  color: var(--white);
+  padding: 20px;
+  height: fit-content;
+  background-color: var(--dark-gray);
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid var(--gray);
+  transition: .2s ease-in-out;
+  animation: fadeIn 2s;
+}
+main #skills ul#items li img{
+  width: 60px;
+  height: 58px;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+main #skills ul#items li:hover{
+  transform: scale(1.1);
+}
+
+footer{
+  margin: 40px 0 40px 0;
+  text-align: center;
+}
+
+footer a{
+  color: var(--primary);
+  font-weight: 600;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  line-height: 24px;
+}
+footer a:before{
+  content: '';
+  position: absolute;
+  transition: transform .5s ease;
+}
+footer a:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--red);
+  transform: scaleX(0);
+}
+footer a:hover{
+  color: var(--red);
+}
+footer a:hover:before{
+  transform: scaleX(1);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@media screen and (max-width: 1216px){
+
+  header{
+    margin-top: 40px;
+    padding: 40px;
+    grid-template-columns: 1fr 400px;
+  }
+
+}
+
+@media screen and (max-width: 1024px){
+  header{
+    grid-template-columns: 1fr 360px;
+  }
+  main #projects .project{
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+  main #projects .project:nth-child(even){
+    flex-direction: column-reverse;
+  }
+  main #projects .project .description{
+    position: relative;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    top: -4px;
+  }
+  main #projects .project .description::before{
+    display: none;
+  }
+  main #projects .project a.screenshot{
+    width: 100%;
+    margin-left: 0;
+  }
+  main #projects .project a.screenshot:nth-child(even){
+    margin-right: 0;
+  }
+  main #projects .project a.screenshot img{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .bm-burger-button {
+    display: block;
+  }
+  .bm-menu-wrap {
+    display: block;
+  }
+  nav{
+    padding: 0 20px 0 20px;
+  }
+  nav ul{
+    display: none;
+  }
+  #header-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  header{
+    display: grid;
+    margin-top: 40px;
+    padding: 0 20px 0 20px;
+    grid-template-areas: 
+    'h3'
+    'h1'
+    'h2'
+    'p'
+    'person'
+    'h4'
+    'social' 
+    ;
+    grid-template-columns: 1fr;
+    column-gap: 40px;
+  }
+  header img{
+    grid-area: person;
+  }
+  header h3{
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+  }
+  header h1{
+    font-size: 32px;
+    margin: 0;
+  }
+  header h2{
+    grid-area: h2;
+    font-size: 26px;
+    margin: 0;
+  }
+  header p{
+    font-size: 16px;
+    line-height: 28px;
+  }
+  main{
+    padding: 0 20px 0 20px;
+  }
+  main h2{
+    font-size: 24px;
+  }
+  main #about-me{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  main #about-me img{
+    display: none;
+  }
+  main #about-me p{
+    line-height: 26px;
+    font-size: 16px;
+  }
+  main #skills{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  main #projects .project .description .footer .tags span{
+    padding: 4px 4px;
+  }
+}
