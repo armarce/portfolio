@@ -379,12 +379,7 @@ main #projects .project .description .footer .links a{
 main #projects .project .description .footer .links a:hover{
   opacity: 1;
 }
-main #projects .project .description .footer .tags span{
-  padding: 6px 10px;
-  margin-right: 6px;
-  border-radius: 4px;
-  text-shadow: 1px 1px 1px var(--dark-gray); 
-}
+
 main #projects .project a.screenshot{
   position: relative;
   z-index: -3;
@@ -401,11 +396,20 @@ main #projects .project a.screenshot img{
   border-radius: 12px;
   opacity: 0.8;
 }
+main #projects .project .description .footer .tags img{
+  height: 30px;
+  margin-right: 20px;
+  opacity: 0.8;
+}
+main #projects .project .description .footer .tags img:hover{
+  opacity: 1;
+}
+/*
 main #projects .project .description .footer .tags .react{
   border: 3px solid #61DAFB;
 }
 main #projects .project .description .footer .tags .nodejs{
-  border: 3px solid #3E863D;
+  width: 40px;
 }
 main #projects .project .description .footer .tags .bulma{
   border: 3px solid #00CAAC;
@@ -436,6 +440,7 @@ main #projects .project .description .footer .tags .redux{
 main #projects .project .description .footer .tags .netlify{
   border: 3px solid #4B95B9
 }
+*/
 /* Skills */
 
 main #skills{
@@ -656,5 +661,10 @@ footer a:hover:before{
   }
   main #projects .project .description .footer .tags span{
     padding: 4px 4px;
+  }
+}
+@media screen and (max-width: 480px){
+  main #projects .project .description .footer .tags img{
+    height: 24px;
   }
 }

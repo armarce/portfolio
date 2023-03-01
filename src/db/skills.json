@@ -4,124 +4,31 @@
             "id": 1, 
             "name": "Frontend",
             "fa-icon": "fa-indent",
-            "items": [
-                {
-                    "name": "Html",
-                    "logo": "html.png"
-                },
-                {
-                    "name": "Css",
-                    "logo": "css.png"
-                },
-                {
-                    "name": "JavaScript",
-                    "logo": "js.png"
-                },
-                {
-                    "name": "JQuery",
-                    "logo": "jquery.png"
-                },
-                {
-                    "name": "React",
-                    "logo": "react.png"
-                },
-                {
-                    "name": "Sass",
-                    "logo": "sass.png"
-                },
-                {
-                    "name": "PostCSS",
-                    "logo": "postcss.png"
-                },                
-                {
-                    "name": "Bulma",
-                    "logo": "bulma.png"
-                },
-                {
-                    "name": "Bootstrap",
-                    "logo": "bootstrap.png"
-                }
-            ]
+            "items": ["Html", "Css", "JavaScript", "JQuery", "React", "Sass", "PostCSS", "Bulma", "Bootstrap"]
         },
         {
             "id": 2, 
             "name": "Backend",
             "fa-icon": "fa-code",
-            "items": [
-                {
-                    "name": "PHP",
-                    "logo": "php.png"
-                },
-                {
-                    "name": "NodeJS",
-                    "logo": "nodejs.png"
-                },
-                {
-                    "name": "Express",
-                    "logo": "express.png"
-                }
-            ]
+            "items": ["PHP", "NodeJS", "Express"]
         },
         {
             "id": 3, 
             "name": "Base de datos",
             "fa-icon": "fa-database",
-            "items": [
-                {
-                    "name": "MySQL",
-                    "logo": "mysql.png"
-                },
-                {
-                    "name": "PostgreSQL",
-                    "logo": "postgresql.png"
-                },
-                {
-                    "name": "Redis",
-                    "logo": "redis.png"
-                },
-                {
-                    "name": "MongoDB",
-                    "logo": "mongodb.png"
-                }
-            ]
+            "items": ["MySQL", "PostgreSQL", "Redis", "MongoDB"]
         },
         {
             "id": 4, 
             "name": "CMS's",
             "fa-icon": "fa-newspaper",
-            "items": [
-                {
-                    "name": "Wordpress",
-                    "logo": "wordpress.png"
-                },
-                {
-                    "name": "Strapi",
-                    "logo": "strapi.png"
-                }
-            ]
+            "items": ["Wordpress", "Strapi", "Payload"]
         },         
         {
             "id": 5, 
             "name": "Devops",
             "fa-icon": "fa-gears",
-            "items": [
-                {
-                    "name": "CentOS",
-                    "logo": "centos.png"
-                },
-                {
-                    "name": "Docker",
-                    "logo": "docker.png"
-                },
-                {
-                    "name": "Caprover",
-                    "logo": "caprover.png"
-                },
-                {
-                    "name": "Github",
-                    "logo": "github.png"
-                }
-            ]
+            "items": ["CentOS", "Docker", "Caprover", "Github"]
         }
     ]
 }

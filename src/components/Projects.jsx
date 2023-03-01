@@ -5,7 +5,7 @@ const Projects = ({}, ref) => {
 
     return (
 
-        <div ref={ref} style={{"paddingTop": "60px"}}>
+        <div ref={ref} style={{"marginTop": "40px", "paddingTop": "60px"}}>
             <h2>Últimos proyectos</h2>
             <section id="projects">
                 {
@@ -20,7 +20,8 @@ const Projects = ({}, ref) => {
                                         {
                                             project.tags.map(tag => (
 
-                                                <span className={tag.toLowerCase()} key={tag}>{tag}</span>
+                                                //<span className={tag.toLowerCase()} key={tag}>{tag}</span>
+                                                <img className={tag.toLowerCase()} src={`./logos/${tag.toLowerCase()}.svg`} alt={tag} title={tag}/>
 
                                             ))
                                         }

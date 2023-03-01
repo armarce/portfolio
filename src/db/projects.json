@@ -1,14 +1,22 @@
 [
     {
         "id": 1,
+        "title": "Stablediffusionai.org",
+        "description": "Aplicación web para generar imágenes a partir de texto empleando el modelo Stable Diffusion 2.1. Desarrollada en una arquitectura de microservicios.",
+        "tags": ["JavaScript", "NodeJS", "Payload", "Docker", "AWS"],
+        "url": "https://stablediffusionai.org/", 
+        "screenshot": "stablediffusionai.jpg"
+    },    
+    {
+        "id": 2,
         "title": "Pasaditos.com",
         "description": "Aplicación web para intercambiar exámenes universitarios. Enfocada en que los exámenes compartidos estén bien organizados y su calidad sea la más alta posible.",
-        "tags": ["Bulma", "React", "NodeJS", "MySQL", "Docker"],
+        "tags": ["Bulma", "React", "NodeJS", "MySQL", "Docker", "AWS"],
         "url": "https://pasaditos.com/", 
         "screenshot": "pasaditos.jpg"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Y2save.net",
         "description": "Aplicación web para descargar cualquier video de Youtube o convertilo a MP3. Página que al día de la fecha cuenta con más de 100 mil visitas mensuales, con un tráfico promedio de 5 Tb",
         "tags": ["JQuery", "PHP", "NodeJS", "MySQL", "Docker"],
@@ -16,21 +24,12 @@
         "screenshot": "y2save.jpg"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Pokedex",
         "description": "¿Quién no conoce un Pokemon? Esta aplicación dónde se puede ver las fichas de todos los Pokemon's es de utilidad para conocer más sobre estas hermosas criaturas. ¡Atrapalo Ya! ",
-        "tags": ["CSS", "React", "Redux", "Docker"],
-        "url": "https://pokedex.app.libatenea.com/", 
+        "tags": ["HTML", "CSS", "React", "Docker"],
+        "url": "https://pokedex.ardev.tech/", 
         "screenshot": "pokedex.jpg",
         "repository": "https://github.com/armarce/pokedex/"
-    },
-    {
-        "id": 4,
-        "title": "Weather APP",
-        "description": "Aplicacion web para conocer datos climatológicos (temperatura, humedad, presión, etc) según la ubicación actual del visitante, útil para tomar previsiones sobre el clima antes de salir de casa.",
-        "tags": ["CSS", "HTML", "React", "Netlify"],
-        "url": "https://ar-wheather-app.netlify.app/", 
-        "screenshot": "weather.jpg",
-        "repository": "https://github.com/armarce/wheather-app/"
     }
 ]

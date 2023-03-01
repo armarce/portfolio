@@ -32,10 +32,10 @@ const Skills = ({}, ref) => {
                     {
                         items.map(item => (
 
-                            <li key={item.name}>
-                                <img src={`./logos/${item.logo}`} alt={item.name}/>
+                            <li key={item}>
+                                <img src={`./logos/${item.toLowerCase()}.svg`} alt={item}/>
                                 <span>
-                                    {item.name}
+                                    {item}
                                 </span>
                             </li>
 
