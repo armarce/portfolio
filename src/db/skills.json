@@ -16,7 +16,7 @@
             "id": 3, 
             "name": "Base de datos",
             "fa-icon": "fa-database",
-            "items": ["MySQL", "PostgreSQL", "Redis", "MongoDB"]
+            "items": ["MySQL", "PostgreSQL", "Redis", "Elasticsearch"]
         },
         {
             "id": 4, 
