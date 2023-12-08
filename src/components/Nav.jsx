@@ -19,7 +19,7 @@ export const Nav = ({handleClick, sectionAbout, sectionSkills, sectionProjects})
 
         <nav>
             <a href="#" id="logo">
-                <span className="red">Ar</span>dev
+                <span className="red">Marce</span>dev
             </a>
             <ul>
                 <li>
